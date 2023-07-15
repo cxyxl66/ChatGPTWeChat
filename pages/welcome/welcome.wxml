@@ -1,0 +1,9 @@
+
+<view class="container">
+ 
+  <image src="../../images/chat/me.png" mode="aspectFit" style="padding-top:10%;margin:0 auto;">
+  </image>
+
+  <image src="../../images/flag.png" mode="aspectFit" style="padding-top:15%;margin:0 auto;">
+  </image>
+</view>

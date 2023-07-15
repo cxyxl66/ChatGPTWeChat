@@ -1,0 +1,43 @@
+{
+  "pages": [
+    "pages/welcome/welcome",
+    "pages/index/index",
+    "pages/user/user",
+    "pages/chat/chat",
+    "pages/integral/integral"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#C22A1E"
+  },
+  "tabBar": {
+    "borderStyle": "white",
+    "selectedColor": "#333333",
+    "position": "bottom",
+    "color": "#999999",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "主页",
+        "iconPath": "/images/icon/home1.png",
+        "selectedIconPath": "/images/icon/home2.png"
+      },
+      {
+        "pagePath": "pages/chat/chat",
+        "text": "聊天",
+        "iconPath": "/images/icon/message1.png",
+        "selectedIconPath": "/images/icon/message2.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "/images/icon/user1.png",
+        "selectedIconPath": "/images/icon/user2.png"
+      }
+    ]
+  },
+  "requiredBackgroundModes": [
+    "audio",
+    "location"
+  ],
+  "sitemapLocation": "sitemap.json"
+}

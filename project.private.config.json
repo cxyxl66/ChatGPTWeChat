@@ -1,0 +1,9 @@
+{
+  "description": "",
+  "projectname": "ChatGPTWeChat",
+  "setting": {
+    "compileHotReLoad": true,
+    "urlCheck": false
+  },
+  "libVersion": "2.30.2"
+}

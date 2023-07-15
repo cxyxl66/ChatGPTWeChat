@@ -1,0 +1,26 @@
+<!--pages/integral/integral.wxml-->
+<view style="text-align: center;padding-top: 40px;">
+  <view>扫描下方二维码，添加作者微信，免费赠送50积分，微信号：cxyxl66</view>
+  <image src="{{weixin}}" bindtap='clickImg' mode="widthFix" />
+  <view style="width: 80%;padding-left: 10%;padding-top: 10px;">
+  <van-cell-group>
+    <van-field
+    name="integral"
+    value="{{integral}}"
+    bind:change="onchange"
+    data-value="integral"
+    clearable
+    required
+    label-align="center"
+    label="兑换码"
+    title-width="3em"
+    placeholder="请输入兑换码"
+  />
+  </van-cell-group>
+  <view style="padding-top: 15px;">
+    <van-button type="primary" bind:click="exchange" >兑换积分</van-button>
+  </view>
+
+  </view>
+</view>
+

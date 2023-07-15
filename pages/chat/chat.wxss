@@ -1,0 +1,103 @@
+/* pages/contact/contact.wxss */
+
+page {
+  background: url(https://www.jingyoushui.cn/image/c30008b2-6f80-4435-971d-9b4984ce0976.jpg) no-repeat center center;
+  background-size: 100% 100%;
+
+}
+
+.inputRoom {
+  width: 100vw;
+  height: 16vw;
+  border-top: 1px solid #cdcdcd;
+  background-color: #f1f1f1;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  z-index: 20;
+}
+
+textarea {
+  width: 60vw;
+  height: 9.33vw;
+  background-color: #fff;
+  border-radius: 40rpx;
+  margin-left: 2vw;
+  padding: 0 3vw;
+  font-size: 35rpx;
+  color: #444;
+  line-height: 7vw;
+}
+
+.mini-btn{
+  margin-left: 3vw;
+  margin-top: 5px;
+}
+
+.delete {
+  margin-left: 1vw;
+  margin-top: -25px;
+  width: 10px;
+  width: 30px;
+  height: 30px;
+}
+
+.leftMsg {
+  font-size: 35rpx;
+  color: #444;
+  line-height: 7vw;
+  padding: 2vw 2.5vw;
+  background-color: #fff;
+  margin-left: -1.6vw;
+  border-radius: 10rpx;
+  z-index: 10;
+  word-wrap: break-word;
+  width: 80%;
+}
+
+.rightMsg {
+  font-size: 35rpx;
+  color: #444;
+  line-height: 7vw;
+  padding: 2vw 2.5vw;
+  background-color: #96EB6A;
+  margin-right: -1.6vw;
+  border-radius: 10rpx;
+  z-index: 10;
+  white-space:pre-wrap;
+  width: 80%;
+}
+
+.circle[plain]{
+  display: flex;
+  margin-right: 20rpx;
+  right: 0;
+  position: fixed;
+  top: 5%;
+  padding: 0;
+  border: none;
+  width: 54rpx;
+  height: 54rpx;
+  z-index:1
+ }
+.image {
+  width: 54rpx;
+  height: 54rpx;
+}
+
+.copy {
+  padding-top: 1px;
+  padding-right: 55px;
+  float: right;
+  color:white;
+  font-size: smaller;
+}
+
+.copy-right {
+  padding-top: 1px;
+  padding-left: 55px;
+  float: left;
+  color:white;
+  font-size: smaller;
+}

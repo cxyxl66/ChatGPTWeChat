@@ -1,0 +1,39 @@
+<view class='container'>
+<!--头像名称-->
+  <view class="partOne">
+    <view class="userinfo">
+        <image class="userinfo-avatar" src="../../images/chat/me.png" mode="cover"></image>
+        <text class="userinfo-nickname">用户ID:{{userId}}, 积分:{{integral}}</text>
+    </view>
+  </view>
+
+  <view class="partTwo">
+    <button open-type="contact" class="contact">
+      <view class="tab1">
+        <image src="../../images/my/wechat.png" style="width:20px;float: left;" mode="widthFix"></image>
+        <view style="padding-top:8px;float: left;padding-left:20px;">客服中心</view>
+        <image src="../../images/my/right.png" style="width:30px;float: right;margin-top:-10px" mode="widthFix"></image>
+      </view>
+    </button>
+    <view class="tab" bindtap="clickIntegral">
+     <image src="../../images/my/integral.png" style="width:20px;float: left;" mode="widthFix"></image>
+     <view style="padding-top:8px;padding-left:40px;">获取积分</view>
+     <image src="../../images/my/right.png" style="width:30px;float: right;margin-top:-10px" mode="widthFix"></image>
+   </view>
+
+   <view wx:if="{{userId === 'daf9c4013b' || userId === 'c0cfe1d990' }}" class="tab" bindtap="addIntegral">
+     <image src="../../images/my/integral.png" style="width:20px;float: left;" mode="widthFix"></image>
+     <view style="padding-top:8px;padding-left:40px;">创建积分</view>
+     <image src="../../images/my/right.png" style="width:30px;float: right;margin-top:-10px" mode="widthFix"></image>
+   </view>
+
+    <button open-type="share" class="contact">
+      <view class="tab1">
+        <image src="../../images/my/share.png" style="width:20px;float: left;" mode="widthFix"></image>
+        <view style="padding-top:8px;float: left;padding-left:20px;">转发分享</view>
+        <image src="../../images/my/right.png" style="width:30px;float: right;margin-top:-10px" mode="widthFix"></image>
+      </view>
+    </button>
+  </view>
+</view>
+

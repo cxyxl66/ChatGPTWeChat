@@ -1,0 +1,18 @@
+<!--pages/index/index.wxml-->
+<van-tabs swipeable class="tabs" ellipsis="false" swipe-threshold="4" bind:click="changeType">
+  <view wx:for="{{roleType}}" wx:key="id">
+    <van-tab title="{{item.roleTypeName}}">
+    </van-tab>
+  </view>
+</van-tabs>
+<view class="content">
+ <view wx:for="{{roles}}" class="role" wx:key="index" >
+  <view  bindtap="tabClick" data-role="{{item}}">
+    <image mode="scaleToFill" class="category-imgbox" src="{{item.image}}"></image>
+    <view class="title">{{item.title}}</view>
+    <view class="des">{{item.description}}</view>
+  
+  </view>
+ </view>
+  
+</view>

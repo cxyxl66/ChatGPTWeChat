@@ -1,0 +1,64 @@
+<!--pages/contact/contact.wxml-->
+
+<view >
+    <!-- <button plain='true' class="circle" bindtap="clearTex">
+   <image mode='aspectFill' src='/images/icon/delete.png' class='image'>
+    </image>
+  </button> -->
+  <scroll-view scroll-y="true" scroll-into-view='{{toView}}' style='height: {{scrollHeight}};' id="chatPage">
+    <!-- <view class='scrollMsg'> -->
+    <block wx:for='{{msgList}}' wx:for-index="index" wx:key="index">
+
+      <!-- 单个消息1 客服发出（左） -->
+      <view wx:if='{{item.role=="assistant"}}' id='msg-{{index}}' style='display: flex; padding: 2vw 11vw 2vw 2vw;margin-top: 20px;'>
+        <view wx:if="{{socketOpen}}" style='width: 11vw; height: 11vw;'>
+          <image style='width: 11vw; height: 11vw; border-radius: 10rpx;' src="{{role.image}}"></image>
+        </view>
+        <view wx:if="{{!socketOpen}}" style='width: 11vw; height: 11vw;'>
+          <image style='width: 11vw; height: 11vw; border-radius: 10rpx;filter:grayscale(100%)' src="{{role.image}}"></image>
+        </view>
+        
+        <view style='width: 4vw; height: 11vw; margin-left: 0.5vw; display: flex; align-items: center; z-index: 9;'>
+          <image style='width: 4vw;' src='../../images/chat/向左.png' mode='widthFix'></image>
+        </view>
+         <block>
+          <towxml wx:if="{{item.md != ''}}" user-select='{{true}}' class='leftMsg' nodes="{{item.md}}"></towxml>
+          <text wx:if="{{item.md == ''}}" user-select='{{true}}' class='leftMsg' decode="{{true}}">{{item.content}}</text>
+  
+        </block>
+        
+      </view>
+      <view class="copy" wx:if='{{item.role=="assistant"}}' catchtap="copyText" data-copy="{{item.content}}">复制</view>
+     
+
+      <!-- 单个消息2 用户发出（右） -->
+      <view wx:if='{{item.role=="user"}}' id='msg-{{index}}' style='display: flex; justify-content: flex-end; padding: 2vw 2vw 2vw 11vw;margin-top: 20px;'>
+        <view class='rightMsg'>{{item.content}}</view>
+        <view style='width: 4vw; height: 11vw; margin-right: 0.5vw; display: flex; align-items: center; z-index: 9;'>
+          <image style='width: 4vw;' src='../../images/chat/向右.png' mode='widthFix'></image>
+        </view>
+        <view style='width: 11vw; height: 11vw;'>
+          <image style='width: 11vw; height: 11vw; border-radius: 10rpx;' src='../../images/chat/me.png'></image>
+        </view>
+      </view>
+      <view class="copy-right" wx:if='{{item.role=="user"}}' catchtap="copyText" data-copy="{{item.content}}">复制</view>
+
+    </block>
+    <!-- </view> -->
+
+    <!-- 占位 -->
+    <view style='width: 100%; height: 18vw;' id='msg-{{lastId}}'></view>
+  </scroll-view>
+
+  <view class='inputRoom' style='bottom: {{inputBottom}}'>
+    <form bindsubmit="sendClick" style="float: left;">
+      <textarea style="float: left;"  adjust-position='{{false}}' value='{{inputVal}}' bindfocus='focus' focus="{{true}}"  bindblur='blur' disabled="{{!socketOpen}}" maxlength="-1" name="textarea" show-confirm-bar="{{false}}"></textarea>
+     
+   <image mode='aspectFill' src='/images/icon/delete.png' class='delete' bindtap="clearTex">
+    </image>
+
+    <button class="mini-btn" type="primary" size="mini" form-type="submit">发送</button>
+    </form>
+    
+  </view>
+</view>
